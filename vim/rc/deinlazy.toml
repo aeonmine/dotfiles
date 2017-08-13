@@ -1,0 +1,106 @@
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+hook_post_update = '''
+  if executable('gmake')
+    let cmd = 'gmake'
+  else
+    let cmd = 'make'
+  endif
+  let g:dein#plugin.build = cmd
+'''
+on_source = ['unite.vim']
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+if   = ''' has('nvim') '''
+hook_source = 'source ~/dotfiles/vim/rc/plugins/deoplete.rc.vim'
+
+[[plugins]]
+repo = 'Shougo/neocomplcache'
+on_event = 'InsertEnter'
+hook_source = 'source ~/dotfiles/vim/rc/plugins/neocomplecache.rc.vim'
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+depends = 'context_filetype.vim'
+if = ''' has('lua') '''
+on_event = 'InsertEnter'
+hook_source = '''
+  let g:neocomplete#enable_at_startup = 1
+  source ~/dotfiles/vim/rc/plugins/neocomplete.rc.vim
+'''
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo  = 'ternjs/tern_for_vim'
+on_ft = ['javascript']
+hook_post_update = '''
+let g:dein#plugin.build = 'npm install'
+'''
+[[plugins]]
+repo  = 'carlitux/deoplete-ternjs'
+on_ft = ['javascript']
+
+# ====== Programming Languages =====
+[[plugins]]
+repo  = 'kchmck/vim-coffee-script'
+on_ft = ['coffeescript']
+[[plugins]]
+repo  = 'pangloss/vim-javascript'
+on_ft = ['javascript']
+[[plugins]]
+repo = 'vim-scripts/JavaScript-syntax'
+on_ft = ['javascript']
+[[plugins]]
+repo = 'vim-scripts/jQuery'
+on_ft = ['javascript']
+[[plugins]]
+repo  = 'mxw/vim-jsx'
+on_ft = ['javascript']
+
+[[plugins]]
+repo  = 'elzr/vim-json'
+on_ft = ['json']
+
+[[plugins]]
+repo  = 'ekalinin/Dockerfile.vim'
+on_ft = ['dockerfile']
+
+[[pugins]]
+repo  = 'hail2u/vim-css3-syntax'
+on_ft = ['css']
+
+[[plugins]]
+repo  = 'stephpy/vim-yaml'
+on_ft = ['yaml']
+
+[[plugins]]
+repo  = 'cespare/vim-toml'
+on_ft = ['toml']
+
+[[plugins]]
+repo  = 'tpope/vim-markdown'
+on_ft = ['markdown']
+
+[[plugins]]
+repo  = 'kannokanno/previm'
+on_ft = ['markdown']
+
+[[plugins]]
+repo  = 'editorconfig/editorconfig-vim'
+on_ft = ['editorconfig']
+
+[[plugins]]
+repo  = 'uarun/vim-protobuf'
+on_ft = 'protobuf'
+
+[[plugins]]
+repo  = 'fatih/vim-nginx'
+
+[[plugins]]
+repo  = 'tfnico/vim-gradle'
+on_ft = ['gradle']
+
+[[plugins]]
+repo  = 'kylef/apiblueprint.vim'
+on_ft = ['apiblueprint']

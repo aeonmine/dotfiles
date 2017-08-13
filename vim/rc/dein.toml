@@ -1,0 +1,57 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+depends =  ['nerdtree']
+[[plugins]]
+repo = 'c9s/cascading.vim'
+[[plugins]]
+repo = 'scrooloose/nerdcommenter.git'
+[[plugins]]
+repo = 'godlygeek/tabular'
+[[plugins]]
+repo = 'vim-scripts/camelcasemotion'
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+[[plugins]]
+repo = 'yegappan/grep'
+[[plugins]]
+repo = 'othree/eregex.vim'
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+[[plugins]]
+repo = 'vim-scripts/errormarker.vim'
+[[plugins]]
+repo = 'scrooloose/syntastic'
+[[plugins]]
+repo = 'fholgado/minibufexpl.vim'
+[[plugins]]
+repo = 'vim-scripts/taglist.vim'
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+[[plugins]]
+repo = 'majutsushi/tagbar'
+[[plugins]]
+repo = 'osyo-manga/vim-over'
+[[plugins]]
+repo = 'LeafCage/yankround.vim'
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+let g:airline_powerline_fonts = 1
+'''
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+[[plugins]]
+repo = 'yuroyoro/yuroyoro256.vim'
