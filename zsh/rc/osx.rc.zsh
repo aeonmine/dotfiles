@@ -29,7 +29,7 @@ export PATH=$MYSQL_HOME/bin:$PATH
 export TERM=xterm-256color
 
 # anyenv
-export PATH="$HOME/.anyenv/shims:$PATH"
+export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
 # ssh
