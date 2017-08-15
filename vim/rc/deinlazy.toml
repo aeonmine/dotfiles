@@ -1,15 +1,4 @@
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-hook_post_update = '''
-  if executable('gmake')
-    let cmd = 'gmake'
-  else
-    let cmd = 'make'
-  endif
-  let g:dein#plugin.build = cmd
-'''
-on_source = ['unite.vim']
-[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 if   = ''' has('nvim') '''
 hook_source = 'source ~/dotfiles/vim/rc/plugins/deoplete.rc.vim'
