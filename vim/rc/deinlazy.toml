@@ -1,9 +1,4 @@
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-if   = ''' has('nvim') '''
-hook_source = 'source ~/dotfiles/vim/rc/plugins/deoplete.rc.vim'
-
-[[plugins]]
 repo = 'Shougo/neocomplete.vim'
 depends = 'context_filetype.vim'
 if = ''' has('lua') '''

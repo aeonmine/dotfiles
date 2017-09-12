@@ -20,3 +20,6 @@ source ~/dotfiles/vim/rc/editing.rc.vim
 source ~/dotfiles/vim/rc/encoding.rc.vim
 "プラグインに依存するアレ
 source ~/dotfiles/vim/rc/plugins.rc.vim
+if has('nvim')
+  let g:python3_host_prog = expand('$HOME') . '/.anyenv/envs/pyenv/shims/python'
+endif

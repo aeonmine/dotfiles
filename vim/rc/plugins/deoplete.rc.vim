@@ -10,6 +10,7 @@ endfunction"}}}
 
 " <S-TAB>: completion back.
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr> <Esc> pumvisible() ? deoplete#cancel_popup() : "\<Esc>"
 
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
@@ -22,7 +23,8 @@ inoremap <silent><expr><C-l>       deoplete#complete_common_string()
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function() abort
-  return deoplete#cancel_popup() . "\<CR>"
+  " return deoplete#close_popup() . "\<CR>"
+  return deoplete#close_popup()
 endfunction
 
 inoremap <expr> '  pumvisible() ? deoplete#close_popup() : "'"
