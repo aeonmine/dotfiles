@@ -21,7 +21,8 @@ inoremap <expr><C-g>       deoplete#refresh()
 inoremap <silent><expr><C-l>       deoplete#complete_common_string()
 
 " <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+" inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+inoremap <expr><CR> pumvisible() ? deoplete#close_popup() : "<CR>"
 function! s:my_cr_function() abort
   " return deoplete#close_popup() . "\<CR>"
   return deoplete#close_popup()
