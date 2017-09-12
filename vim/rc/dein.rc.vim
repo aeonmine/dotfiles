@@ -24,7 +24,7 @@ call dein#load_toml('~/dotfiles/vim/rc/dein.toml', {'lazy': 0})
 call dein#load_toml('~/dotfiles/vim/rc/deinlazy.toml', {'lazy' : 1})
 
 if has('nvim')
-  call dein#load_toml('~/dotfiles/vim/rc/deineo.toml', {})
+  call dein#load_toml('~/dotfiles/vim/rc/deinneo.toml', {})
 endif
 
 if dein#tap('deoplete.nvim') && has('nvim')

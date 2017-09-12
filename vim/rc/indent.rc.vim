@@ -10,6 +10,9 @@ set cindent      " Cプログラムファイルの自動インデントを始め
 set tabstop=2 shiftwidth=2 expandtab
 
 if has("autocmd")
+  autocmd BufRead,BufNewFile *.zep setfiletype zep
+  autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+
   "ファイルタイプの検索を有効にする
   filetype plugin on
   "そのファイルタイプにあわせたインデントを利用する
@@ -31,6 +34,7 @@ if has("autocmd")
   autocmd FileType perl       setlocal sw=4 sts=4 ts=4 et
   autocmd FileType php        setlocal sw=4 sts=0 ts=4 et
   autocmd FileType js         setlocal sw=4 sts=0 ts=2 noexpandtab
+  autocmd FileType json       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType python     setlocal sw=4 sts=4 ts=4 et
   autocmd FileType ruby       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType haml       setlocal sw=2 sts=2 ts=2 et
@@ -44,5 +48,5 @@ if has("autocmd")
   autocmd FileType yaml       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType zsh        setlocal sw=4 sts=4 ts=4 et
   autocmd FileType scala      setlocal sw=2 sts=2 ts=2 et
+  autocmd FileType markdown   setlocal sw=2 sts=2 ts=2 et
 endif
-

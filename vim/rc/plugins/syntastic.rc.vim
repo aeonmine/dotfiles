@@ -6,7 +6,8 @@ let g:syntastic_enable_highlighting = 1
 let g:syntastic_auto_loc_list=1
 " rubocop
 let g:syntastic_mode_map = { 'mode': 'passive',
-            \ 'active_filetypes': ['ruby'] }
+            \ 'active_filetypes': ['php', 'ruby', 'javascript', 'json'] }
 let g:syntastic_ruby_checkers = ['rubocop']
-
-
+" let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_php_checkers=['php']
+let g:syntastic_quite_warnings=0

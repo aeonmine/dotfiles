@@ -34,10 +34,10 @@ autocmd BufReadPost *_spec.rb call RSpecQuickrun()
 
 augroup QuickRunPHPUnit
   autocmd!
-  autocmd BufWinEnter,BufNewFile *Test.php set filetype=php.phpunit
 augroup END
+autocmd QuickRunPHPUnit BufWinEnter,BufNewFile *Test.php set filetype=php.phpunit
 
-let g:quickrun_config['phpunit'] = {
+let g:quickrun_config['php.phpunit'] = {
  \ 'outputter/buffer/split': 'vertical 35',
  \ 'command': 'phpunit',
  \ 'cmdopt': '',

@@ -21,6 +21,8 @@ set notitle                      " vimを使ってくれてありがとう
 
 " OSのクリップボードを使用する
 set clipboard+=unnamed
+"ヤンクした文字は、システムのクリップボードに入れる"
+set clipboard=unnamed
 " ターミナルでマウスを使用できるようにする
 set mouse=a
 set guioptions+=a
@@ -28,8 +30,6 @@ if !has('nvim')
   set ttymouse=xterm2
 endif
 
-"ヤンクした文字は、システムのクリップボードに入れる"
-set clipboard=unnamed
 " 挿入モードでCtrl+pを押すとキーワード補完リストを表示する"
 imap <C-p>  <ESC>"*pa
 

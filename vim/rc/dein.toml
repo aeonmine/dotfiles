@@ -1,10 +1,10 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-[[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
-depends =  ['nerdtree']
+# [[plugins]]
+# repo = 'scrooloose/nerdtree'
+# [[plugins]]
+# repo = 'Xuyuanp/nerdtree-git-plugin'
+# depends =  ['nerdtree']
 [[plugins]]
 repo = 'c9s/cascading.vim'
 [[plugins]]
@@ -21,6 +21,8 @@ repo = 'yegappan/grep'
 repo = 'othree/eregex.vim'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
+[[plugins]]
+repo = 'thinca/vim-ref'
 [[plugins]]
 repo = 'vim-scripts/errormarker.vim'
 [[plugins]]
@@ -66,3 +68,8 @@ hook_post_update = '''
   endif
   let g:dein#plugin.build = cmd
 '''
+
+[[plugins]]
+repo = 'xwsoul/vim-zephir'
+[[plugins]]
+repo = 'osyo-manga/shabadou.vim'

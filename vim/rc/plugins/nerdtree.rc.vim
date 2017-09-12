@@ -5,7 +5,7 @@ function s:OpenTreeAndTagList()
   if exists(":NERDTree")
     exec "NERDTree"
   endif
-  call feedkeys("\<C-l>")
+  " call feedkeys("\<C-l>")
 endfunction
 
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
