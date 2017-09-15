@@ -238,16 +238,12 @@ SAVEHIST=10000
 
 # 登録済コマンド行は古い方を削除
 setopt hist_ignore_all_dups
-
 # historyの共有
 setopt share_history
-
 # 余分な空白は詰める
 setopt hist_reduce_blanks
-
 # add history when command executed.
 setopt inc_append_history
-
 # history (fc -l) コマンドをヒストリリストから取り除く。
 setopt hist_no_store
 # コマンド名に / が含まれているとき PATH 中のサブディレクトリを探す

@@ -2,7 +2,7 @@
 " プラグインごとの設定 Plugins
 "-------------------------------------------------------------------------------
 
-source ~/dotfiles/vim/rc/plugins/nerdtree.rc.vim
+" source ~/dotfiles/vim/rc/plugins/nerdtree.rc.vim
 source ~/dotfiles/vim/rc/plugins/cascading.rc.vim
 source ~/dotfiles/vim/rc/plugins/nerdcommenter.rc.vim
 source ~/dotfiles/vim/rc/plugins/tabular.rc.vim

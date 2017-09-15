@@ -1,24 +1,30 @@
 if [ ! -e "${HOME}/.zplug/init.zsh" ]; then
-    echo "nai"
     curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 fi
 
 source ~/.zplug/init.zsh
 
-zplug "wbinglee/zsh-wakatime"
+# zplug "wbinglee/zsh-wakatime"
 
 # syntax
-zplug "chrissicool/zsh-256color"
-zplug "Tarrasch/zsh-colors"
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "ascii-soup/zsh-url-highlighter"
-
-# program
-zplug "voronkovich/mysql.plugin.zsh"
+# zplug "chrissicool/zsh-256color"
+# zplug "Tarrasch/zsh-colors"
+# zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# zplug "ascii-soup/zsh-url-highlighter"
 
 # tools
-zplug "marzocchi/zsh-notify"
-zplug "oknowton/zsh-dwim"
+# zplug "zsh-users/zsh-completions"
+# zplug "tarruda/zsh-fuzzy-match"
+
+zplug load
 
 source ${HOME}/dotfiles/zsh/rc/custom.rc.zsh
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+

@@ -28,20 +28,4 @@ export PATH=$MYSQL_HOME/bin:$PATH
 # TERM
 export TERM=xterm-256color
 
-# anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
 
-# ssh
-export SSHDIR="$HOME/.ssh"
-
-function ssh_add_list(){
-    if [ `ssh-add -l | grep "RSA" | wc -l` -eq 0 ]; then
-        find ${SSHDIR} -name "*_rsa" | xargs ssh-add > /dev/null 2>&1
-        echo "ssh-add を実行しました"
-    fi
-}
-ssh_add_list
-
-# adb
-export PATH="/Applications/android_sdk/sdk/platform-tools:$PATH"

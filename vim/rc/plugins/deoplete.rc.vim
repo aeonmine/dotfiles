@@ -28,7 +28,7 @@ function! s:my_cr_function() abort
   return deoplete#close_popup()
 endfunction
 
-inoremap <expr> '  pumvisible() ? deoplete#close_popup() : "'"
+" inoremap <expr> '  pumvisible() ? deoplete#close_popup() : "'"
 
 call deoplete#custom#source('ghc', 'sorters', ['sorter_word'])
 
