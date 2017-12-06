@@ -487,3 +487,6 @@ linux*)
     [ -f ~/dotfiles/zsh/rc/linux.rc.zsh ] && source ~/dotfiles/zsh/rc/linux.rc.zsh
     ;;
 esac
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+#export XDG_CONFIG_HOME="${HOME}/init.vim"
