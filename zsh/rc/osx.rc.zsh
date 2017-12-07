@@ -28,4 +28,7 @@ export PATH=$MYSQL_HOME/bin:$PATH
 # TERM
 export TERM=xterm-256color
 
+# gcp
+export PATH=${0:A:h}/bin:$PATH
 
+source ~/dotfiles/zsh/rc/completion.zsh

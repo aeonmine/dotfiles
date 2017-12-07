@@ -106,7 +106,7 @@ case ${UID} in
 
     # git のブランチ名 *と作業状態* を zsh の右プロンプトに表示＋ status に応じて色もつけてみた - Yarukidenized:ヤルキデナイズド :
     # http://d.hatena.ne.jp/uasi/20091025/1256458798
-    autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
+   autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
 
     function rprompt-git-current-branch {
       local name st color gitdir action
@@ -139,7 +139,7 @@ case ${UID} in
     # PCRE 互換の正規表現を使う
     #setopt re_match_pcre
 
-    RPROMPT='`rprompt-git-current-branch`${RESET}${WHITE}[${MAGENTA}%(5~,%-2~/.../%2~,%~)${WHITE}]${RESET}'
+   RPROMPT='`rprompt-git-current-branch`${RESET}${WHITE}[${MAGENTA}%(5~,%-2~/.../%2~,%~)${WHITE}]${RESET}'
 
     ;;
 esac
@@ -228,8 +228,24 @@ bindkey "\\ep" history-beginning-search-backward-end
 bindkey "\\en" history-beginning-search-forward-end
 
 # glob(*)によるインクリメンタルサーチ
-bindkey '^R' history-incremental-pattern-search-backward
-bindkey '^S' history-incremental-pattern-search-forward
+if zle -la | grep -q '^history-incremental-pattern-search'; then
+  bindkey '^r' history-incremental-pattern-search-backward
+  bindkey '^s' history-incremental-pattern-search-forward
+  bindkey -M viins '^r' history-incremental-pattern-search-backward
+  bindkey -M vicmd '^r' history-incremental-pattern-search-backward
+  bindkey -M viins '^s' history-incremental-pattern-search-forward
+  bindkey -M vicmd '^s' history-incremental-pattern-search-forward
+else
+  bindkey '^r' history-incremental-search-backward
+  bindkey '^s' history-incremental-search-forward
+  bindkey -M viins '^r' history-incremental-search-backward
+  bindkey -M vicmd '^r' history-incremental-search-backward
+  bindkey -M viins '^s' history-incremental-search-forward
+  bindkey -M vicmd '^s' history-incremental-search-forward
+fi
+
+# bindkey '^R' history-incremental-pattern-search-backward
+# bindkey '^S' history-incremental-pattern-search-forward
 
 ## Command history configuration
 HISTFILE=~/.zsh_history
@@ -487,6 +503,30 @@ linux*)
     [ -f ~/dotfiles/zsh/rc/linux.rc.zsh ] && source ~/dotfiles/zsh/rc/linux.rc.zsh
     ;;
 esac
+# anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
-#export XDG_CONFIG_HOME="${HOME}/init.vim"
+eval "$(anyenv init - --no-rehash)"
+
+# ssh
+export SSHDIR="$HOME/.ssh"
+
+function ssh_add_list(){
+    if [ `ssh-add -l | grep "RSA" | wc -l` -eq 0 ]; then
+        find ${SSHDIR} -name "github_rsa" | xargs ssh-add > /dev/null 2>&1
+        find ${SSHDIR} -name "id_rsa_pz" | xargs ssh-add > /dev/null 2>&1
+        echo "ssh-add を実行しました"
+    fi
+}
+ssh_add_list
+
+# adb
+export PATH="/Applications/android_sdk/sdk/platform-tools:$PATH"
+
+# production
+export ENV=localhost
+
+# neovim
+export XDG_CONFIG_HOME=$HOME/.config
+
+# nodebrew
+# export PATH="$HOME/.nodebrew/current/bin:$PATH"
