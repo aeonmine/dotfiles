@@ -31,4 +31,30 @@ export TERM=xterm-256color
 # gcp
 export PATH=${0:A:h}/bin:$PATH
 
-source ~/dotfiles/zsh/rc/completion.zsh
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init - --no-rehash)"
+
+# ssh
+export SSHDIR="$HOME/.ssh"
+
+function ssh_add_list(){
+    if [ `ssh-add -l | grep "RSA" | wc -l` -eq 0 ]; then
+        find ${SSHDIR} -name "github_rsa" | xargs ssh-add > /dev/null 2>&1
+        find ${SSHDIR} -name "id_rsa_pz" | xargs ssh-add > /dev/null 2>&1
+        echo "ssh-add を実行しました"
+    fi
+}
+ssh_add_list
+
+# adb
+export PATH="/Applications/android_sdk/sdk/platform-tools:$PATH"
+
+# production
+export ENV=localhost
+
+# neovim
+export XDG_CONFIG_HOME=$HOME/.config
+
+# nodebrew
+# export PATH="$HOME/.nodebrew/current/bin:$PATH"
