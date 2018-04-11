@@ -39,7 +39,7 @@ alias gst='git status -s -b'
 alias gst="git log --date=short --max-count=1 --pretty=format:'%Cgreen%h %cd %Cblue%cn%x09%Creset%s' | tail -1 && echo '' && git status -s -b"
 
 alias ev='vim ~/dotfiles/vim/rc/*.rc.vim'
-#alias ayanami='cd ~/Documents/git/ayanami-server'
+alias ayanami='cd ~/Documents/git/ayanami-server'
 
 alias vim='nvim'
 alias vi='nvim'

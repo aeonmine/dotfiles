@@ -85,5 +85,5 @@ repo  = 'kylef/apiblueprint.vim'
 on_ft = ['apiblueprint']
 
 [[plugins]]
-repo  = 'etaoins/vim-volt-syntax'
+repo  = 'yukpiz/vim-volt-syntax'
 on_ft = ['volt']

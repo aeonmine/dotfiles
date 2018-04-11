@@ -21,5 +21,6 @@ source ~/dotfiles/vim/rc/encoding.rc.vim
 "プラグインに依存するアレ
 source ~/dotfiles/vim/rc/plugins.rc.vim
 if has('nvim')
-  let g:python3_host_prog = $HOME . '/.anyenv/envs/pyenv/shims/python'
+  let g:python_host_prog = $HOME . '/.anyenv/envs/pyenv/versions/neovim2/bin/python'
+  let g:python3_host_prog = $HOME . '/.anyenv/envs/pyenv/versions/neovim3/bin/python'
 endif

@@ -28,7 +28,6 @@ source ~/.zplug/init.zsh
 # tools
  zplug "zsh-users/zsh-completions"
  zplug "tarruda/zsh-fuzzy-match"
-
  zplug "sorin-ionescu/prezto"
  # install後に実行
  # ln -s $HOME/.zplug/repos/sorin-ionescu/prezto $HOME/.zprezto
