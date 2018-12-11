@@ -3,8 +3,19 @@ repo = 'Shougo/dein.vim'
 # [[plugins]]
 # repo = 'scrooloose/nerdtree'
 # [[plugins]]
+# repo = 'tpope/vim-fugitive'
+# hook_add = '''
+    # nnoremap [figitive] <Nop>
+    # nnoremap <Leader>g [figitive]
+    # nnoremap <silent> [figitive]s :<C-u>Gstatus<CR>
+    # nnoremap <silent> [figitive]d :<C-u>Gdiff<CR>
+    # nnoremap <silent> [figitive]b :<C-u>Gblame<CR>
+# '''
+# [[plugins]]
 # repo = 'Xuyuanp/nerdtree-git-plugin'
-# depends =  ['nerdtree']
+# depends =  ['vim-fugitive']
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
 [[plugins]]
 repo = 'c9s/cascading.vim'
 [[plugins]]
@@ -57,6 +68,8 @@ let g:airline_powerline_fonts = 1
 repo = 'vim-airline/vim-airline-themes'
 [[plugins]]
 repo = 'yuroyoro/yuroyoro256.vim'
+[[plugins]]
+repo = 'joshdick/onedark.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'

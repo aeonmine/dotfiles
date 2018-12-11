@@ -24,18 +24,22 @@ on_ft = ['javascript']
 [[plugins]]
 repo  = 'kchmck/vim-coffee-script'
 on_ft = ['coffeescript']
+# [[plugins]]
+# repo  = 'pangloss/vim-javascript'
+# on_ft = ['javascript']
+# [[plugins]]
+# repo = 'vim-scripts/JavaScript-syntax'
+# on_ft = ['javascript']
 [[plugins]]
-repo  = 'pangloss/vim-javascript'
-on_ft = ['javascript']
-[[plugins]]
-repo = 'vim-scripts/JavaScript-syntax'
+repo = 'othree/yajs.vim'
 on_ft = ['javascript']
 [[plugins]]
 repo = 'vim-scripts/jQuery'
 on_ft = ['javascript']
-[[plugins]]
-repo  = 'mxw/vim-jsx'
-on_ft = ['javascript']
+# [[plugins]]
+# repo  = 'MaxMEllon/vim-jsx-pretty'
+# repo  = 'mxw/vim-jsx'
+# on_ft = ['javascript']
 
 [[plugins]]
 repo  = 'elzr/vim-json'

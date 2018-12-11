@@ -2,7 +2,12 @@
 " カラー関連 Colors
 "-------------------------------------------------------------------------------
 " colorscheme mrkn256
-colorscheme yuroyoro256
+" colorscheme yuroyoro256
+let g:onedark_color_overrides = {
+\ "black": {"gui": "#000000", "cterm": "16", "cterm16": "0" },
+\}
+let g:onedark_termcolors = 256
+colorscheme onedark
 
 " ターミナルタイプによるカラー設定
 if &term =~ "xterm-256color" || "screen-256color"
@@ -29,8 +34,9 @@ hi PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg
 autocmd FileType go :highlight goErr cterm=bold ctermfg=214
 autocmd FileType go :match goErr /\<err\>/
 
-autocmd FileType javascript :highlight jsColonAtTail  cterm=underline ctermfg=lightblue guibg=darkgray
-autocmd FileType javascript :match jsColonAtTail /:$/
+" autocmd FileType javascript :highlight jsColonAtTail  cterm=underline ctermfg=lightblue guibg=darkgray
+" autocmd FileType javascript :match jsColonAtTail /:$/
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
 
 " vimdiffの色設定
