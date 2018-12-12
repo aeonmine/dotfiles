@@ -39,6 +39,8 @@ repo = 'vim-scripts/errormarker.vim'
 [[plugins]]
 repo = 'scrooloose/syntastic'
 [[plugins]]
+repo = 'w0rp/ale'
+[[plugins]]
 repo = 'fholgado/minibufexpl.vim'
 [[plugins]]
 repo = 'vim-scripts/taglist.vim'
