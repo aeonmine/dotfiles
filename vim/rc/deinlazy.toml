@@ -33,9 +33,9 @@ on_ft = ['coffeescript']
 [[plugins]]
 repo = 'othree/yajs.vim'
 on_ft = ['javascript']
-[[plugins]]
-repo = 'vim-scripts/jQuery'
-on_ft = ['javascript']
+# [[plugins]]
+# repo = 'vim-scripts/jQuery'
+# on_ft = ['javascript']
 # [[plugins]]
 # repo  = 'MaxMEllon/vim-jsx-pretty'
 # repo  = 'mxw/vim-jsx'
