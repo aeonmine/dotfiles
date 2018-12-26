@@ -17,4 +17,5 @@ source ~/dotfiles/vim/rc/plugins/syntastic.rc.vim
 source ~/dotfiles/vim/rc/plugins/dumbbuf.rc.vim
 source ~/dotfiles/vim/rc/plugins/minibufexpl.rc.vim
 source ~/dotfiles/vim/rc/plugins/taglist.rc.vim
+source ~/dotfiles/vim/rc/plugins/lightline.rc.vim
 source ~/dotfiles/vim/rc/plugins/ale.rc.vim

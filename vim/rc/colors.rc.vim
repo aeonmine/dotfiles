@@ -1,6 +1,9 @@
 "-------------------------------------------------------------------------------
 " カラー関連 Colors
 "-------------------------------------------------------------------------------
+" ハイライト on
+" syntax on
+
 " colorscheme mrkn256
 " colorscheme yuroyoro256
 let g:onedark_color_overrides = {
@@ -8,6 +11,10 @@ let g:onedark_color_overrides = {
 \}
 let g:onedark_termcolors = 256
 colorscheme onedark
+" colorscheme yuroyoro256
+" autocmd BufRead * colorscheme onedark
+
+autocmd FileType php :colorscheme yuroyoro256
 
 " ターミナルタイプによるカラー設定
 if &term =~ "xterm-256color" || "screen-256color"
@@ -25,8 +32,6 @@ elseif &term =~ "xterm-color"
   set t_Sb=[4%dm
 endif
 
-" ハイライト on
-syntax enable
 " 補完候補の色づけ for vim7
 hi PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c
 

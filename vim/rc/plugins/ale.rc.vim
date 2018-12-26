@@ -1,7 +1,9 @@
 let g:ale_statusline_format = ['✗ %d', '⚠ %d', '⬥ ok']
 let g:ale_echo_msg_format = '[%linter%] %s'
-let g:ale_fix_on_save = 1
-let b:ale_fixers = {'javascript': ['eslint']}
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_enter = 0
+" let b:ale_fixers = {'javascript': ['eslint']}
 let b:ale_linters = ['eslint']
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚠ '
