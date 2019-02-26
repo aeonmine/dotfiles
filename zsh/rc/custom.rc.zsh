@@ -20,6 +20,14 @@ case ${UID} in
     WHITE="%{${fg[white]}%}"
     POH="haga.zsh $"
 
+    ## for c in {000..255}; do echo -n "\e[38;5;${c}m $c" ; [ $(($c%16)) -eq 15 ] && echo;done;echo
+    ## {n}m の数字を変えれば色変わります。
+    #DEFAULT_COLOR_FG=$'%{\e[1;0m%}'
+    #PJ_COLOR_FG=$'%{\e[38;5;174m%}'
+    #SERVER_COLOR_FG=$'%{\e[38;5;111m%}'
+    #USER_COLOR_FG=$'%{\e[38;5;070m%}'
+    #RPROMPT_COLOR_FG=$'%{\e[38;5;169m%}'
+
     #
     # Prompt
     #
