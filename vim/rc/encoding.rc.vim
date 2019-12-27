@@ -14,6 +14,7 @@ autocmd FileType java :set fileencoding=utf-8
 autocmd FileType scala :set fileencoding=utf-8
 autocmd FileType php :set fileencoding=utf-8
 autocmd FileType ruby :set fileencoding=utf-8
+autocmd FileType go :set fileencoding=utf-8
 
 " ワイルドカードで表示するときに優先度を低くする拡張子
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc

@@ -2,14 +2,13 @@
 " ステータスライン StatusLine
 "-------------------------------------------------------------------------------
 set laststatus=2 " 常にステータスラインを表示
-
-set statusline+=%{ALEGetStatusLine()}
-
+" set statusline+=%{ALEGetStatusLine()}
+set ambiwidth=double
 "カーソルが何行目の何列目に置かれているかを表示する
 set ruler
 
 " vim-powerlineでフォントにパッチを当てないなら以下をコメントアウト
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
 
 "自動的に QuickFix リストを表示する
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep,vimgrepadd cwin

@@ -1,19 +1,19 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
-# [[plugins]]
-# repo = 'scrooloose/nerdtree'
-# [[plugins]]
-# repo = 'tpope/vim-fugitive'
-# hook_add = '''
-    # nnoremap [figitive] <Nop>
-    # nnoremap <Leader>g [figitive]
-    # nnoremap <silent> [figitive]s :<C-u>Gstatus<CR>
-    # nnoremap <silent> [figitive]d :<C-u>Gdiff<CR>
-    # nnoremap <silent> [figitive]b :<C-u>Gblame<CR>
-# '''
-# [[plugins]]
-# repo = 'Xuyuanp/nerdtree-git-plugin'
-# depends =  ['vim-fugitive']
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = '''
+		nnoremap [figitive] <Nop>
+		nnoremap <Leader>g [figitive]
+		nnoremap <silent> [figitive]s :<C-u>Gstatus<CR>
+		nnoremap <silent> [figitive]d :<C-u>Gdiff<CR>
+		nnoremap <silent> [figitive]b :<C-u>Gblame<CR>
+'''
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+depends =  ['vim-fugitive']
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 [[plugins]]
@@ -63,9 +63,6 @@ repo = 'tyru/open-browser.vim'
 repo = 'w0ng/vim-hybrid'
 [[plugins]]
 repo = 'vim-airline/vim-airline'
-hook_add = '''
-let g:airline_powerline_fonts = 1
-'''
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 [[plugins]]
@@ -88,3 +85,7 @@ hook_post_update = '''
 repo = 'xwsoul/vim-zephir'
 [[plugins]]
 repo = 'osyo-manga/shabadou.vim'
+[[plugins]]
+repo  = 'neoclide/coc.nvim'
+rev   = 'release'
+merge = 0

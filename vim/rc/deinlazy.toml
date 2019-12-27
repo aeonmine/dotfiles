@@ -1,13 +1,4 @@
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
-depends = 'context_filetype.vim'
-if = ''' has('lua') '''
-on_event = 'InsertEnter'
-hook_source = '''
-  let g:neocomplete#enable_at_startup = 1
-  source ~/dotfiles/vim/rc/plugins/neocomplete.rc.vim
-'''
-[[plugins]]
 repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
@@ -16,10 +7,6 @@ on_ft = ['javascript']
 hook_post_update = '''
 let g:dein#plugin.build = 'npm install'
 '''
-[[plugins]]
-repo  = 'carlitux/deoplete-ternjs'
-on_ft = ['javascript']
-
 # ====== Programming Languages =====
 [[plugins]]
 repo  = 'kchmck/vim-coffee-script'
@@ -60,7 +47,9 @@ on_ft = ['yaml']
 [[plugins]]
 repo  = 'cespare/vim-toml'
 on_ft = ['toml']
-
+[[plugins]]
+repo  = 'cespare/vim-go'
+on_ft = ['go']
 [[plugins]]
 repo  = 'tpope/vim-markdown'
 on_ft = ['markdown']

@@ -9,6 +9,12 @@ dein.vim: plugin manager
 - https://github.com/Shougo/dein.vim
 
 ---------------------------------------------
+補完系
+---------------------------------------------
+coc.nvim: Intellisense engine for vim8 & neovim, full language server protocol support as VSCode
+- https://github.com/neoclide/coc.nvim
+
+---------------------------------------------
 表示系
 ---------------------------------------------
 nerdtree: a tree explorer plugin for vim.
@@ -47,15 +53,6 @@ eregex.vim: Perl/Ruby style regexp notation for Vim
 
 grep.vim: Plugin to integrate Grep search tools with Vim
 - https://github.com/yegappan/grep
-
----------------------------------------------
-補完系
----------------------------------------------
-neocomplcache.vim : 究極のVim的補完環境
-- http://github.com/Shougo/neocomplcache/blob/998764e1072fa5b183c3da4705b8187658fa0b41/presen/neocomplcache.txt
-- http://vim-users.jp/2009/07/hack-49/
-- http://www.vim.org/scripts/script.php?script_id=2620
-- http://d.hatena.ne.jp/yuitowest/20100907/1283865197
 
 ---------------------------------------------
 バッファ管理系

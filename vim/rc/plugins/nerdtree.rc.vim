@@ -1,20 +1,10 @@
-function s:OpenTreeAndTagList()
-  if exists(":Tlist")
-    exec "Tlist"
-  endif
-  if exists(":NERDTree")
-    exec "NERDTree"
-  endif
-  " call feedkeys("\<C-l>")
-endfunction
+let NERDTreeShowHidden=1
 
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
   exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
   exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
-" vim起動時にNERDTreeとtaglistを開く
-autocmd vimenter * call s:OpenTreeAndTagList()
 " vimでdirectoryを開いた時にNERDTreeを開く
 autocmd StdinReadPre * let s:std_in=1
 autocmd vimenter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
@@ -54,3 +44,9 @@ function! NoExcitingBuffersLeft()
   endif
 endfunction
 autocmd bufenter * call NoExcitingBuffersLeft()
+augroup nerdtreehidecwd
+  autocmd!
+  autocmd FileType nerdtree setlocal conceallevel=3
+          \ | syntax match NERDTreeHideCWD #^[</].*$# conceal
+          \ | setlocal concealcursor=n
+augroup end

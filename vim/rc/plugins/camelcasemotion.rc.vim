@@ -1,4 +1,4 @@
-" <Shift-wbe>でCameCaseやsnake_case単位での単語移動
+" <w><b><e>でCameCaseやsnake_case単位での単語移動
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e

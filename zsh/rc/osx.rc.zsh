@@ -8,8 +8,9 @@ alias pbc='pbcopy'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-##Java7
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+##Java8
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 # export JAVA_HOME=/Library/Java/Home
 export PATH=$JAVA_HOME/bin:$PATH
 # デフォルトエンコーディングSJISをUTF-8へ
@@ -22,8 +23,7 @@ INFOPATH=/usr/local/info:$INFOPATH
 export INFOPATH
 
 # Mysql
-export MYSQL_HOME=/usr/local
-export PATH=$MYSQL_HOME/bin:$PATH
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # TERM
 export TERM=xterm-256color
@@ -58,3 +58,42 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 # nodebrew
 # export PATH="$HOME/.nodebrew/current/bin:$PATH"
+#
+
+# libconv
+export PATH="/usr/local/opt/libiconv/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/libiconv/lib"
+export CPPFLAGS="-I/usr/local/opt/libiconv/include"
+
+# libiconv
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+# openssl
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
+# icu4c
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+# bison
+export PATH="/usr/local/opt/bison@2.7/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/bison@2.7/lib"
+
+# go(global)
+# プロジェクト毎の切り替えはdirenvで行う
+export GOPATH="$HOME/Documents/go"
+export PATH="$PATH:$GOPATH/bin"
+export GOBIN="$GOPATH/bin"
+# export GOFLAGS=-mod=vendor
+export EDITOR=/usr/local/bin/nvim
+eval "$(direnv hook zsh)"
+
+# gcloud
+export PATH="$PATH:/usr/local/lib/google-cloud-sdk/bin"
