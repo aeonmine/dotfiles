@@ -40,8 +40,10 @@ alias gst="git log --date=short --max-count=1 --pretty=format:'%Cgreen%h %cd %Cb
 
 alias ev='vim ~/dotfiles/vim/rc/*.rc.vim'
 alias asia='cd ~/Documents/git/asia-server'
-alias second='cd ~/Documents/second/log'
+alias second='cd ~/Documents/git/second'
 alias gas='cd ~/Documents/git/google-spreadsheet-merge'
+alias rose='cd ~/Documents/git/rose-server'
+alias micro='cd ~/Documents/git/micro-svc-demo-game'
 
 alias vim='nvim'
 alias vi='nvim'

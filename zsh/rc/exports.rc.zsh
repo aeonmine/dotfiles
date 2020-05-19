@@ -1,0 +1,14 @@
+export LANG=ja_JP.UTF-8
+export LESSCHARSET=utf-8
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+export EDITOR=nvim
+export PATH=$PATH:$HOME/local/bin:/usr/local/git/bin
+export PATH=$PATH:$HOME/dotfiles/bin
+export PATH=$PATH:/sbin:/usr/local/bin
+export PATH="$HOME/pear/bin:$PATH"
+export PATH="/usr/local/opt/bison/bin:$PATH"
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export MANPATH=$MANPATH:/opt/local/man:/usr/local/share/man
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad

@@ -2,7 +2,6 @@
 " プラグインごとの設定 Plugins
 "-------------------------------------------------------------------------------
 
-" source ~/dotfiles/vim/rc/plugins/nerdtree.rc.vim
 source ~/dotfiles/vim/rc/plugins/cascading.rc.vim
 source ~/dotfiles/vim/rc/plugins/nerdtree.rc.vim
 source ~/dotfiles/vim/rc/plugins/nerdcommenter.rc.vim
@@ -22,3 +21,4 @@ source ~/dotfiles/vim/rc/plugins/lightline.rc.vim
 source ~/dotfiles/vim/rc/plugins/ale.rc.vim
 source ~/dotfiles/vim/rc/plugins/coc.rc.vim
 source ~/dotfiles/vim/rc/plugins/airline.rc.vim
+source ~/dotfiles/vim/rc/plugins/go.rc.vim

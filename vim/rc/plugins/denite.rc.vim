@@ -31,3 +31,9 @@ call denite#custom#var('grep', 'recursive_opts', [])
 call denite#custom#var('grep', 'pattern_opt', [])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'final_opts', [])
+
+" Denite用プレフィックス
+nmap [denite] <Nop>
+map <C-j> [denite]
+" ファイル内の関数/クラス等の検索
+nmap <silent> [denite]<C-O> :<C-u>Denite outline -highlight-mode-insert=Search<CR>
