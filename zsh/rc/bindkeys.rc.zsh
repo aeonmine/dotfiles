@@ -8,7 +8,7 @@ bindkey "^n" history-beginning-search-forward-end
 # bindkey '^r' history-incremental-pattern-search-backward
 # bindkey '^s' history-incremental-pattern-search-forward
 # インクリメンタルサーチ
-bindkey '^r' history-incremental-search-backward
+# bindkey '^r' history-incremental-search-backward
 bindkey '^s' history-incremental-search-forward
 # ctrl-w, ctrl-bキーで単語移動
 bindkey "^W" forward-word

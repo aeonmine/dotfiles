@@ -29,10 +29,12 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-## autoload設定
+## export設定
 [ -f ${HOME}/dotfiles/zsh/rc/exports.rc.zsh ] && source ${HOME}/dotfiles/zsh/rc/exports.rc.zsh
 ## plugin読み込み
 [ -f ${HOME}/dotfiles/zsh/rc/plugins.rc.zsh ] && source ${HOME}/dotfiles/zsh/rc/plugins.rc.zsh
+## function読み込み
+[ -f ${HOME}/dotfiles/zsh/rc/functions.rc.zsh ] && source ${HOME}/dotfiles/zsh/rc/functions.rc.zsh
 ## setopt設定
 [ -f ${HOME}/dotfiles/zsh/rc/options.rc.zsh ] && source ${HOME}/dotfiles/zsh/rc/options.rc.zsh
 ## alias設定
@@ -45,6 +47,8 @@ zinit light-mode for \
 [ -f ${HOME}/dotfiles/zsh/rc/autoloads.rc.zsh ] && source ${HOME}/dotfiles/zsh/rc/autoloads.rc.zsh
 ## autoload設定
 [ -f ${HOME}/dotfiles/zsh/rc/zles.rc.zsh ] && source ${HOME}/dotfiles/zsh/rc/zles.rc.zsh
+## fzf (brew install fzf && $(brew --prefix)/opt/fzf/install)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 case "${OSTYPE}" in
 # MacOSX
@@ -62,3 +66,4 @@ esac
 # prompt設定(あとで pure を使った設定になおす)
 # source ${HOME}/dotfiles/zsh/rc/custom.rc.zsh
 # source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+

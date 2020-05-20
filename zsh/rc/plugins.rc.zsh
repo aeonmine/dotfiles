@@ -15,9 +15,6 @@ zinit load "tarruda/zsh-fuzzy-match"
 zinit load "mafredri/zsh-async"
 zinit load "sindresorhus/pure"
 
-## いるかな
-zinit ice wait'!0'; zinit load "vintersnow/anyframe"
-
 ## これは便利
 ## xpanes -c "ping {}" 192.168.0.{1..9}
 ## 事前に brew install tmux-xpanes
