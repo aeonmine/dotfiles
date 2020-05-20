@@ -62,3 +62,6 @@ linux*)
     [ -f ~/dotfiles/zsh/rc/linux.rc.zsh ] && source ~/dotfiles/zsh/rc/linux.rc.zsh
     ;;
 esac
+
+ZSH_HIGHLIGHT_STYLES[globbing]=fg=cyan
+ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=cyan
