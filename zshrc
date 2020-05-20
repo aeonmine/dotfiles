@@ -62,8 +62,3 @@ linux*)
     [ -f ~/dotfiles/zsh/rc/linux.rc.zsh ] && source ~/dotfiles/zsh/rc/linux.rc.zsh
     ;;
 esac
-
-# prompt設定(あとで pure を使った設定になおす)
-# source ${HOME}/dotfiles/zsh/rc/custom.rc.zsh
-# source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-

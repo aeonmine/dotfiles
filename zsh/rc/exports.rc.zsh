@@ -25,4 +25,7 @@ export FZF_DEFAULT_OPTS='--preview "\
 export FZF_ALT_C_OPTS='--preview "tree -C {1} | head -200"'
 # ? で長いコマンドを全部表示
 export FZF_CTRL_R_OPTS='--preview "echo {}" --preview-window down:3:hidden:wrap --bind "?:toggle-preview"'
+# pure
+export PURE_PROMPT_SYMBOL='❯ $'
+export PURE_PROMPT_VICMD_SYMBOL='❮ $'
 
