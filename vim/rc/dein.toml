@@ -87,5 +87,6 @@ repo = 'xwsoul/vim-zephir'
 repo = 'osyo-manga/shabadou.vim'
 [[plugins]]
 repo  = 'neoclide/coc.nvim'
+build = './install.sh nightly'
 rev   = 'release'
 merge = 0

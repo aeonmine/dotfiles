@@ -21,4 +21,4 @@ source ~/dotfiles/vim/rc/plugins/lightline.rc.vim
 source ~/dotfiles/vim/rc/plugins/ale.rc.vim
 source ~/dotfiles/vim/rc/plugins/coc.rc.vim
 source ~/dotfiles/vim/rc/plugins/airline.rc.vim
-source ~/dotfiles/vim/rc/plugins/go.rc.vim
+" source ~/dotfiles/vim/rc/plugins/go.rc.vim
