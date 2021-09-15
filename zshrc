@@ -65,3 +65,9 @@ esac
 
 ZSH_HIGHLIGHT_STYLES[globbing]=fg=cyan
 ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=cyan
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/m-mine/MySpace/tools/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/m-mine/MySpace/tools/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/m-mine/MySpace/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/m-mine/MySpace/tools/google-cloud-sdk/completion.zsh.inc'; fi

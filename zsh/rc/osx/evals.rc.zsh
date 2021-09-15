@@ -1,2 +1,2 @@
-eval "$(anyenv init - --no-rehash)"
-eval "$(direnv hook zsh)"
+#eval "$(anyenv init - --no-rehash)"
+#eval "$(direnv hook zsh)"

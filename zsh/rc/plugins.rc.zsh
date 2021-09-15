@@ -18,7 +18,7 @@ zinit load "sindresorhus/pure"
 ## これは便利
 ## xpanes -c "ping {}" 192.168.0.{1..9}
 ## 事前に brew install tmux-xpanes
-zinit ice wait'!0'; zinit load "greymd/tmux-xpanes"
+## zinit ice wait'!0'; zinit load "greymd/tmux-xpanes"
 
 zinit ice wait"!0" atinit"zpcompinit; zpcdreplay"
 zinit load "zsh-users/zsh-syntax-highlighting"

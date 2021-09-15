@@ -5,3 +5,5 @@
 
 ## pure
 zstyle :prompt:pure:path color cyan
+zstyle :prompt:pure:prompt:success color yellow
+zstyle :prompt:pure:prompt:error color red

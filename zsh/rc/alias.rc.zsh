@@ -22,10 +22,10 @@ alias duh="du -h ./ --max-depth=1"
 alias su="su -l"
 
 # vim
-alias v='vim'
-alias 'src'='exec zsh'
-alias -g V="| vim -"
-alias -g EV="| xargs --verbose sh -c 'vim \"\$@\" < /dev/tty'"
+#alias v='vim'
+#alias 'src'='exec zsh'
+#alias -g V="| vim -"
+#alias -g EV="| xargs --verbose sh -c 'vim \"\$@\" < /dev/tty'"
 
 # colorized cat
 alias ccat='pygmentize -O style=vim -f console256 -g'
@@ -45,7 +45,7 @@ alias gas='cd ~/Documents/git/google-spreadsheet-merge'
 alias rose='cd ~/Documents/git/rose-server'
 alias micro='cd ~/Documents/git/micro-svc-demo-game'
 
-alias vim='nvim'
-alias vi='nvim'
+#alias vim='nvim'
+#alias vi='nvim'
 
 alias phpunit='./vendor/bin/phpunit'
