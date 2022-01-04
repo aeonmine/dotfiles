@@ -1,6 +1,5 @@
 [alias]
   st = status -sb
-  ch = checkout
   br = branch
   bra = branch -a -vv
   ls = ls-files
