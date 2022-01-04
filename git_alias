@@ -1,0 +1,23 @@
+[alias]
+  st = status -sb
+  ch = checkout
+  br = branch
+  bra = branch -a -vv
+  ls = ls-files
+  co = checkout
+  cm = commit -m
+  sh = stash
+  cp = cherry-pick
+  l = log --graph --date=short --pretty=\"format:%C(yellow)%h %C(cyan)%ad %C(green)%an%Creset%x09%s %C(red)%d%Creset\"
+  la = log --oneline --decorate --graph --branches --tags --remotes
+  see = browse
+  save = stash save -u
+  # 現在いるブランチのPull Requestを確認する
+  pr = !hub browse -- pull/$(git symbolic-ref --short HEAD)
+  # 自分が作った全てのPull Requestを開く
+  list = !hub browse -- pulls/$(git config user.name)
+  # git config に設定されているaliasを一覧表示する
+  # 参考: https://qiita.com/sgr-ksmt/items/1cd9597eacc20121a5b0
+  aliases = !git config --get-regexp alias |  sed 's/^alias.//g' | sed 's/ / = /1'
+  coclean = !git checkout . && git clean -fd
+  fe = fetch --prune --all
