@@ -18,5 +18,10 @@
   # git config に設定されているaliasを一覧表示する
   # 参考: https://qiita.com/sgr-ksmt/items/1cd9597eacc20121a5b0
   aliases = !git config --get-regexp alias |  sed 's/^alias.//g' | sed 's/ / = /1'
-  coclean = !git checkout . && git clean -fd
+  coclean = !git checkout . && git clean -fd && git pull --rebase
   fe = fetch --prune --all
+  fdiff = diff --ignore-all-space --no-index
+  fwdiff     = diff --ignore-all-space --word-diff --no-index
+  wdiff = diff --ignore-all-space --word-diff
+  plune = !git branch --merged | grep -vE '(master|develop|release|gh-pages|\\*)' | xargs git branch -d
+  stat  = !cd -- ${GIT_PREFIX:-.} && git stash list && git status --short --branch
