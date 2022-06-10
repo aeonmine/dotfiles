@@ -47,6 +47,8 @@ zinit light-mode for \
 [ -f ${HOME}/dotfiles/zsh/rc/autoloads.rc.zsh ] && source ${HOME}/dotfiles/zsh/rc/autoloads.rc.zsh
 ## autoload設定
 [ -f ${HOME}/dotfiles/zsh/rc/zles.rc.zsh ] && source ${HOME}/dotfiles/zsh/rc/zles.rc.zsh
+## gcloud設定
+[ -f ${HOME}/dotfiles/zsh/rc/gcloud/gcloud.rc.zsh ] && source ${HOME}/dotfiles/zsh/rc/gcloud/gcloud.rc.zsh
 ## fzf (brew install fzf && $(brew --prefix)/opt/fzf/install)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
